@@ -20,7 +20,7 @@ const onlyDigits = function(string) {
       number += char;
     }
   }
-  return parseInt(number);
+  return parseInt(number, 10);
 };
 
 // Cтрока короче 20 символов
