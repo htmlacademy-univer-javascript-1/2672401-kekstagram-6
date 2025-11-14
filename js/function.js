@@ -1,26 +1,26 @@
 const isNormalLength = function (string, maxLength) {
   if (string.length <= maxLength) {
     return true;
-  };
-return false;
+  }
+  return false;
 };
 
 const isPolyndrom = function(word) {
   word = word.replaceAll(' ', '').toLowerCase();
   if (word === word.split('').reverse().join('')) {
     return true;
-  };
-return false;
+  }
+  return false;
 };
 
 const onlyDigits = function(string) {
   let number = '';
-  for (let char of String(string)) {
-    if (!isNaN(parseInt(char))) {
+  for (const char of String(string)) {
+    if (!isNaN(parseInt(char, 10))) {
       number += char;
-    };
-  };
-return parseInt(number);
+    }
+  }
+  return parseInt(number);
 };
 
 // Cтрока короче 20 символов
