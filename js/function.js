@@ -1,27 +1,27 @@
 const isNormalLength = function (string, maxLength) {
   if (string.length <= maxLength) {
     return true;
-  }
-    return false;
-  }
+  };
+return false;
+};
 
 const isPolyndrom = function(word) {
-  word = word.replaceAll(" ", "").toLowerCase();
-  if (word === word.split("").reverse().join("")) {
+  word = word.replaceAll(' ', '').toLowerCase();
+  if (word === word.split('').reverse().join('')) {
     return true;
-  }
+  };
 return false;
-}
+};
 
 const onlyDigits = function(string) {
-  number = "";
-  for (char of String(string)) {
+  let number = '';
+  for (let char of String(string)) {
     if (!isNaN(parseInt(char))) {
       number += char;
-    }
-  }
-  return parseInt(number);
-}
+    };
+  };
+return parseInt(number);
+};
 
 // Cтрока короче 20 символов
 isNormalLength ('проверяемая строка', 20); // true
